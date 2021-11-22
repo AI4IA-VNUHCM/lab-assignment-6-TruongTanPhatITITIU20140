@@ -17,7 +17,17 @@ Ex:
 
 void Ex5(char *str){
 	//Your codes here
-	
+	int a = 0;
+	int k = 0;
+	while (str[a++] != '\0') k++;
+
+	for (int i = 0; i <= (k / 2) - 1; i++) {
+		if (!(str[i] + 1 == str[k - 1 - i] || str[i] + 2 == str[k - 1 - i])) {
+			printf("Invalid!");
+			return;
+		}
+	}
+	printf("Valid!");
 }
 
 int main(int argc, char *argv[]) {
