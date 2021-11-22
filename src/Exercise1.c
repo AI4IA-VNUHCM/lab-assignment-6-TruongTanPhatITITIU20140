@@ -16,8 +16,8 @@ void Ex1(int n){
 	char *digit[] = {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
 	char *twoDigits[] = {"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
 	char *tenMultiple[] = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
-	
-	do {
+
+	while (n != 0) {
 		if (n >= 1000 && n <= 9999){
 			printf("%s thousand ", digit[n / 1000]);
 			n -= (n / 1000) * 1000;
@@ -38,7 +38,7 @@ void Ex1(int n){
 			printf("%s", digit[n]);
 			n = 0;
 		}
-	} while (n != 0)
+	}
 
 
 }
