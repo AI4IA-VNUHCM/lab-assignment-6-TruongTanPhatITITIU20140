@@ -20,22 +20,19 @@ void Ex2(int n, char *str[]){
 		a[i] = i;
 	}
 
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i < n; i++){
 		for (int j = i + 1; j < n; j++) {
-			int a = 0;
+			int k = 0;
 
-			while (str[a[i]][a] != '\0'){
-				if (str[a[i]][a] > str[a[j]][a]) {
+			while (str[a[i]][k] != '\0') {
+				if (str[a[i]][k] > str[a[j]][k]) {
 					int temp = a[i];
 					a[i] = a[j];
 					a[j] = temp;
 					break;
-				} else if (str[a[i]][a] == str[a[j]][a]) {
-					a++;
 				}
-				else {
-					break; 
-				}
+				else if (str[a[i]][k] == str[a[j]][k]) k++;
+				else break;
 			}
 		}
 	}
